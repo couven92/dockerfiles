@@ -12,6 +12,8 @@ RUN     apt-get update && apt-get install -y apt-utils \
     && 	apt-get install --yes python make pkg-config gcc libx11-dev \
             libxkbfile-dev libsecret-1-dev fakeroot rpm
 
+RUN yarn global add npm
+
 RUN mkdir -p /vscode && curl -sSL "https://github.com/microsoft/vscode/archive/1.38.0.tar.gz" \
         | tar -xzv -C /vscode
 
