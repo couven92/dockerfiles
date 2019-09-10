@@ -14,10 +14,10 @@ RUN     apt-get update && apt-get install -y apt-utils \
 
 
 RUN mkdir -p /vscode && curl -sSL "https://github.com/microsoft/vscode/archive/1.38.0.tar.gz" \
-        | tar -xzv -C /vscode
+        | tar -xz -C /vscode
 
 WORKDIR /vscode/vscode-1.38.0
 
 ENV DEBIAN_FRONTEND teletype
 
-RUN yarn
+RUN yarn add npm
